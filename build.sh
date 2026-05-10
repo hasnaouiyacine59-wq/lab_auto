@@ -23,5 +23,5 @@ docker run -d \
 docker logs -f n-2 &
 docker logs -f n-1 &
 sleep 60
-docker exec n-1 python3 dock_hop/camoufox_browser.py &
-docker exec n-2 python3 dock_hop/camoufox_browser.py &
+#docker exec n-1 python3 dock_hop/camoufox_browser.py &
+#docker exec n-2 python3 dock_hop/camoufox_browser.py &
