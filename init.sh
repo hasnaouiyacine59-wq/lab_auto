@@ -1,4 +1,6 @@
 #!/bin/bash
+docker rm -f $(docker ps -aq)
+docker pull quay.io/mylastres0rt05_redhat/lab-bollet:latest
 
 docker run -d \
   --name n-1 \
@@ -41,12 +43,12 @@ docker run -d \
   -e NORDVPN_TOKEN="your_token" \
   -e NORDVPN_ANALYTICS=false \
   quay.io/mylastres0rt05_redhat/lab-bollet:latest
-
+sleep 60
 docker logs -f n-1 &
 docker logs -f n-2 &
 docker logs -f n-3 &
 docker logs -f n-4 &
-sleep 60
+
 #docker exec n-1 python3 dock_hop/camoufox_browser.py &
 #docker exec n-2 python3 dock_hop/camoufox_browser.py &
 
