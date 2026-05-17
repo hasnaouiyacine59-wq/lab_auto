@@ -2,7 +2,7 @@
 
 docker run -d \
   --name n-1 \
-  --hostname b_ \
+  --hostname b_gate_1 \
   --privileged \
   --device /dev/net/tun \
   -e NORDVPN_TOKEN="your_token" \
@@ -13,7 +13,7 @@ docker run -d \
 
 docker run -d \
   --name n-2 \
-  --hostname my-hostname-2 \
+  --hostname b_gate_2 \
   --privileged \
   --device /dev/net/tun \
   -e NORDVPN_TOKEN="your_token" \
@@ -24,7 +24,7 @@ docker run -d \
 
 docker run -d \
   --name n-3 \
-  --hostname b_ \
+  --hostname b_gate_3 \
   --privileged \
   --device /dev/net/tun \
   -e NORDVPN_TOKEN="your_token" \
@@ -35,7 +35,7 @@ docker run -d \
 
 docker run -d \
   --name n-4 \
-  --hostname my-hostname-2 \
+  --hostname b_gate_4 \
   --privileged \
   --device /dev/net/tun \
   -e NORDVPN_TOKEN="your_token" \
